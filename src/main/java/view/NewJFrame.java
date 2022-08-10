@@ -7,6 +7,7 @@ package view;
 import controller.Main_controller;
 import java.sql.ResultSet;
 import javax.imageio.plugins.tiff.ExifGPSTagSet;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -130,10 +131,10 @@ public class NewJFrame extends javax.swing.JFrame {
         String apellido = salida.getString("primer_apellido");
         String ciudada = salida.getString("ciudad_residencia");
         model.addRow(new Object[]{id, nombre,apellido,ciudada});
-        }
+        }   
             
         } catch (Exception e) {
-            
+            JOptionPane.showMessageDialog(null, "Error de conexion", "Error", 0);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -154,7 +155,7 @@ public class NewJFrame extends javax.swing.JFrame {
             model.addRow(new Object[]{id, constructora, habitaciones, ciudad});
             }
         } catch (Exception e) {
-            
+            JOptionPane.showMessageDialog(null, "Error de conexion", "Error", 0);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -173,7 +174,7 @@ public class NewJFrame extends javax.swing.JFrame {
             model.addRow(new Object[]{id, constructora, banco});
             }
         } catch (Exception e) {
-            
+            JOptionPane.showMessageDialog(null, "Error de conexion", "Error", 0);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
